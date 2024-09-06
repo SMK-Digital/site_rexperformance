@@ -1,0 +1,36 @@
+/* assets/css/typography.css */
+
+/* Fontes Personalizadas */
+@font-face {
+    font-family: 'Autogate';
+    src: url('../fonts/autogate-sans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Broche';
+    src: url('../fonts/Broche-Cut.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bahnscrift';
+    src: url('../fonts/BAHNSCHRIFT.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Aplicação das fontes personalizadas */
+body {
+    font-family: 'Bahnscrift', sans-serif; /* Fonte padrão do corpo */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Broche', serif; /* Fonte para os títulos */
+}
+
+code, pre {
+    font-family: 'Bahnscrift', monospace; /* Fonte para código */
+}

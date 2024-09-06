@@ -1,0 +1,47 @@
+/* Estilos gerais da topbar */
+.topbar {
+    font-family: 'Bahnscrift';
+    font-weight: bold;
+    background: linear-gradient(354deg, rgba(95, 96, 94, 0.856) 0%, rgba(0, 0, 0, 1) 5%, rgba(36, 35, 35, 1) 49%, rgba(0, 0, 0, 1) 85%, rgba(95, 96, 94, 0.875) 98%);
+}
+
+.topbar a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+.topbar a:hover,
+.topbar a:focus {
+    color: var(--light);
+}
+
+.topbar-contact,
+.topbar-social {
+    height: 45px;
+}
+
+.topbar-icon,
+.topbar-icon-small {
+    font-size: 1rem; /* Ajuste conforme necessário */
+    color: #ffcc00;
+}
+
+.btn-outline-light {
+    border-color: #ffcc00;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+    border-width: 0.4em;
+}
+
+/* Estilo para esconder a topbar ao rolar */
+.topbar-hidden {
+    display: none;
+    transition: display 0.5s ease;
+}
+
+
+
+

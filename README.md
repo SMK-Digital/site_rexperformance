@@ -1,6 +1,6 @@
 # Site Rex Performance
 
-![Logo da SMK](https://smkdigital.com.br/img/carousel-SMK-1.png)
+![Logo da SMK](images/banner-smk-new.png)
 
 ## Descrição
 Este projeto é o site da Rex Performance, desenvolvido para apresentar e promover os serviços oferecidos pela empresa.
