@@ -25,23 +25,23 @@ Este projeto é o site da Rex Performance, desenvolvido para apresentar e promov
     </td>
     <td align="center" style="width: 33.33%; vertical-align: top;">
       <div style="display: flex; justify-content: center;">
-        <img src="https://img.shields.io/badge/-563D7C?style=plastic&logo=bootstrap&logoColor=white" alt="Bootstrap" style="width: 120px; height: auto;" />
+        <img src="https://img.shields.io/badge/-F7DF1E?style=plastic&logo=javascript&logoColor=white" alt="JavaScript" style="width: 120px; height: auto;" />
       </div>
-      <br /><strong>Bootstrap 5.3</strong><br />Framework CSS utilizado para responsividade e componentes da interface.
+      <br /><strong>JavaScript</strong><br />Funcionalidades interativas no site.
     </td>
   </tr>
   <tr>
     <td align="center" style="width: 33.33%; vertical-align: top;">
       <div style="display: flex; justify-content: center;">
-        <img src="https://img.shields.io/badge/-F7DF1E?style=plastic&logo=javascript&logoColor=white" alt="JavaScript" style="width: 120px; height: auto;" />
+        <img src="https://img.shields.io/badge/-563D7C?style=plastic&logo=bootstrap&logoColor=white" alt="Bootstrap" style="width: 120px; height: auto;" />
       </div>
-      <br /><strong>JavaScript</strong><br />Funcionalidades interativas no site.
+      <br /><strong>Bootstrap 5.3</strong><br />Framework CSS utilizado para responsividade e componentes da interface.
     </td>
     <td align="center" style="width: 33.33%; vertical-align: top;">
       <div style="display: flex; justify-content: center;">
-        <img src="https://img.shields.io/badge/-339AF0?style=plastic&logo=font-awesome&logoColor=white" alt="Font Awesome" style="width: 120px; height: auto;" />
+        <img src="https://img.shields.io/badge/-7952B3?style=plastic&logo=bootstrap&logoColor=white" alt="Bootstrap Icons" style="width: 120px; height: auto;"  />
       </div>
-      <br /><strong>Font Awesome</strong><br />Ícones usados no site.
+      <br /><strong>Bootstrap Icons</strong><br />Ícones usados no site.
     </td>
     <td align="center" style="width: 33.33%; vertical-align: top;">
       <div style="display: flex; justify-content: center;">
@@ -50,13 +50,29 @@ Este projeto é o site da Rex Performance, desenvolvido para apresentar e promov
       <br /><strong>Git</strong><br />Controle de versão.
     </td>
   </tr>
+  <tr>
+    <td align="center" style="width: 33.33%; vertical-align: top;">
+      <div style="display: flex; justify-content: center;">
+        <img src="https://img.shields.io/badge/-339AF0?style=plastic&logo=javascript&logoColor=white" alt="wow.js" style="width: 120px; height: auto;" />
+      </div>
+      <br /><strong>wow.js</strong><br />Animações ao rolar a página.
+    </td>
+    <td align="center" style="width: 33.33%; vertical-align: top;">
+      <div style="display: flex; justify-content: center;">
+        <img src="https://img.shields.io/badge/-4CAF50?style=plastic&logo=css3&logoColor=white" alt="animate.css" style="width: 120px; height: auto;" />
+      </div>
+      <br /><strong>animate.css</strong><br />Biblioteca de animações CSS.
+    </td>
+    <td align="center" style="width: 33.33%; vertical-align: top;">
+      <div style="display: flex; justify-content: center;">
+        <img src="https://img.shields.io/badge/-3DDC84?style=plastic&logo=linux&logoColor=white" alt="Linux" style="width: 120px; height: auto;" />
+      </div>
+      <br /><strong>Linux</strong><br />Ambiente de desenvolvimento.
+    </td>
+  </tr>
 </table>
 
 </div>
-
-
-
-
 
 ## Instalação
 
@@ -73,6 +89,19 @@ Este projeto é o site da Rex Performance, desenvolvido para apresentar e promov
 3. Abra o projeto em seu navegador.
 
 ## Uso
+
+### wow.js
+Inicie o `wow.js` após o carregamento da página:
+
+```javascript
+new WOW().init();
+```
+### animate.css
+Adicione classes de animação ao seu HTML:
+
+```html
+<div class="wow animate__animated animate__bounce">Conteúdo animado</div>
+```
 
 Para visualizar o site, abra o arquivo `index.html` em um navegador de sua escolha.
 
