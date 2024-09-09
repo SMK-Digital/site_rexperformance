@@ -60,10 +60,6 @@ h5 {
     z-index: 9999; /* Garante que o spinner fique sobre outros elementos */
 }
 
-.spinner-border {
-    /* Certifique-se de que o spinner esteja visível enquanto é mostrado */
-}
-
 /* Classe para esconder o spinner */
 .hide-spinner {
     display: none !important;
