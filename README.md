@@ -5,6 +5,59 @@
 ## Descrição
 Este projeto é o site da Rex Performance, desenvolvido para apresentar e promover os serviços oferecidos pela empresa.
 
+## Tecnologias Utilizadas
+
+<div align="center">
+
+<table style="width: 100%; table-layout: fixed;">
+  <tr>
+    <td align="center" style="width: 33.33%; vertical-align: top;">
+      <div style="display: flex; justify-content: center;">
+        <img src="https://img.shields.io/badge/-E34F26?style=plastic&logo=html5&logoColor=white" alt="HTML5" style="width: 120px; height: auto;" />
+      </div>
+      <br /><strong>HTML5</strong><br />Estrutura do site.
+    </td>
+    <td align="center" style="width: 33.33%; vertical-align: top;">
+      <div style="display: flex; justify-content: center;">
+        <img src="https://img.shields.io/badge/-1572B6?style=plastic&logo=css3&logoColor=white" alt="CSS3" style="width: 120px; height: auto;" />
+      </div>
+      <br /><strong>CSS3</strong><br />Estilização do site.
+    </td>
+    <td align="center" style="width: 33.33%; vertical-align: top;">
+      <div style="display: flex; justify-content: center;">
+        <img src="https://img.shields.io/badge/-563D7C?style=plastic&logo=bootstrap&logoColor=white" alt="Bootstrap" style="width: 120px; height: auto;" />
+      </div>
+      <br /><strong>Bootstrap 5.3</strong><br />Framework CSS utilizado para responsividade e componentes da interface.
+    </td>
+  </tr>
+  <tr>
+    <td align="center" style="width: 33.33%; vertical-align: top;">
+      <div style="display: flex; justify-content: center;">
+        <img src="https://img.shields.io/badge/-F7DF1E?style=plastic&logo=javascript&logoColor=white" alt="JavaScript" style="width: 120px; height: auto;" />
+      </div>
+      <br /><strong>JavaScript</strong><br />Funcionalidades interativas no site.
+    </td>
+    <td align="center" style="width: 33.33%; vertical-align: top;">
+      <div style="display: flex; justify-content: center;">
+        <img src="https://img.shields.io/badge/-339AF0?style=plastic&logo=font-awesome&logoColor=white" alt="Font Awesome" style="width: 120px; height: auto;" />
+      </div>
+      <br /><strong>Font Awesome</strong><br />Ícones usados no site.
+    </td>
+    <td align="center" style="width: 33.33%; vertical-align: top;">
+      <div style="display: flex; justify-content: center;">
+        <img src="https://img.shields.io/badge/-F05032?style=plastic&logo=git&logoColor=white" alt="Git" style="width: 120px; height: auto;" />
+      </div>
+      <br /><strong>Git</strong><br />Controle de versão.
+    </td>
+  </tr>
+</table>
+
+</div>
+
+
+
+
+
 ## Instalação
 
 1. Clone o repositório:

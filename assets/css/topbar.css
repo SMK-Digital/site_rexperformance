@@ -3,8 +3,15 @@
     font-family: 'Bahnscrift';
     font-weight: bold;
     background: linear-gradient(354deg, rgba(95, 96, 94, 0.856) 0%, rgba(0, 0, 0, 1) 5%, rgba(36, 35, 35, 1) 49%, rgba(0, 0, 0, 1) 85%, rgba(95, 96, 94, 0.875) 98%);
+    position: fixed; /* Manter fixo no topo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 998; /* Ficar abaixo da navbar */
+    transition: top 0.3s; /* Suavizar a transição de ocultar */
 }
 
+/* Links da topbar */
 .topbar a {
     color: var(--secondary);
     text-decoration: none;
@@ -15,6 +22,7 @@
     color: var(--light);
 }
 
+/* Contêineres dentro da topbar */
 .topbar-contact,
 .topbar-social {
     height: 45px;
@@ -30,16 +38,9 @@
     border-color: #ffcc00;
 }
 
-.spinner-border {
-    width: 3rem;
-    height: 3rem;
-    border-width: 0.4em;
-}
-
-/* Estilo para esconder a topbar ao rolar */
+/* Ajustes para ocultar a topbar ao rolar */
 .topbar-hidden {
-    display: none;
-    transition: display 0.5s ease;
+    top: 45px; /* Ajustar conforme a altura da topbar */
 }
 
 

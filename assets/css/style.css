@@ -3,6 +3,9 @@
 @import 'typography.css';
 @import 'topbar.css';
 @import 'navbar.css';
+@import 'buttons.css';
+@import 'sections.css';
+@import 'footer.css';
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
 :root {
@@ -19,14 +22,57 @@
     box-sizing: border-box;
 }
 
-.spinner-border {
-    width: 3rem;
-    height: 3rem;
-    border-width: 0.4em;
+body{
+    font-family: 'Bahnscrift', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    color: var(--light);
+    background-color: var(--primary);
 }
+
+h1 {
+    font-family: 'Autogate', Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+h5 {
+    font-family: 'Autogate', Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.text-shadow-smoky {
+    text-shadow: 3px 3px 3px rgba(2, 56, 10, 0.562);
+}
+
+
+/*** Miscellaneous ***/
 .spinner-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.7); /* Opcional: para um fundo semi-transparente */
+    z-index: 9999; /* Garante que o spinner fique sobre outros elementos */
+}
+
+.spinner-border {
+    /* Certifique-se de que o spinner esteja visível enquanto é mostrado */
+}
+
+/* Classe para esconder o spinner */
+.hide-spinner {
+    display: none !important;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
 }

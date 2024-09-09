@@ -1,0 +1,508 @@
+/** Barra Títulos **/
+.section-title::before {
+    -webkit-box-shadow: 0px 0px 10px #adcce0;
+    box-shadow: 0px 0px 10px var(--secondary);
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 5px;
+    left: 0;
+    bottom: 0;
+    background: var(--light);
+    border-radius: 8px;
+}
+
+.section-title.text-center::before {
+    left: 50%;
+    margin-left: -75px;
+}
+
+.section-title.section-title-sm::before {
+    width: 90px;
+    height: 3px;
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 6px;
+    bottom: 0px;
+    border-radius: 30%;
+    background: var(--secondary);
+    box-shadow: 0px 0px 10px var(--secondary);
+    -webkit-animation: section-title-run 2s infinite linear;
+    animation: section-title-run 2s infinite linear;
+}
+
+.section-title.section-title-sm::after {
+    width: 4px;
+    height: 3px;
+}
+
+.section-title.text-center::after {
+    -webkit-animation: section-title-run-center 2s infinite linear;
+    animation: section-title-run-center 2s infinite linear;
+}
+
+.section-title.section-title-sm::after {
+    -webkit-animation: section-title-run-sm 2s infinite linear;
+    animation: section-title-run-sm 2s infinite linear;
+}
+
+@keyframes section-title-run {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: 150px;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes section-title-run-center {
+    0% {
+        left: 50%;
+        margin-left: -75px;
+    }
+
+    50% {
+        left: 50%;
+        margin-left: 45px;
+    }
+
+    100% {
+        left: 50%;
+        margin-left: -75px;
+    }
+}
+
+@keyframes section-title-run-sm {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: 85px;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+/*** Carousel ***/
+.carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+@media (max-width: 576px) {
+    .carousel-caption h5 {
+        font-size: 14px;
+        font-weight: 500 !important;
+    }
+
+    .carousel-caption h1 {
+        font-size: 30px;
+        font-weight: 600 !important;
+    }
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+.caption-background {
+    font-size: 0.9rem;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para telas menores */
+@media (max-width: 576px) {
+    .carousel-caption {
+        padding-top: 10px;
+        margin: 0;
+    }
+
+    .carousel-item {
+        padding-bottom: 50px;
+    }
+
+    .caption-background {
+        display: none;
+    }
+}
+
+/* Seção Destaque */
+.cropped-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.cropped-image-up {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 100% 100%;
+}
+
+.left-div {
+    height: 100%;
+}
+
+/* Estilos para telas pequenas */
+@media (max-width: 991.98px) {
+    .cropped-image {
+        height: 200px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .cropped-image-up {
+        height: 200px;
+        object-fit: cover;
+        object-position: 100% 30%;
+    }
+}
+
+.collapse-box {
+    background: linear-gradient(rgba(0, 0, 0, 0.856) 0%, rgba(36, 35, 35, 1) 49%);
+    border-radius: 5px;
+    border-bottom: 2px solid rgba(15, 146, 26, 0.788);
+    border-top: 2px solid rgba(15, 146, 26, 0.788);
+    max-height: 0;
+    overflow: hidden;
+    padding: 8px;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.collapse.show {
+    max-height: 300px;
+    opacity: 1;
+}
+
+/* Seção: Por Que Escolher a Rex Performance? */
+#why-choose-us {
+    background: linear-gradient(rgba(0, 0, 0, 0.856) 0%, rgba(36, 35, 35, 1) 49%);
+    border-radius: 5px;
+    border-bottom: 2px solid rgba(15, 146, 26, 0.788);
+    border-top: 2px solid rgba(15, 146, 26, 0.788);
+}
+
+.feature-box {
+    background: rgba(255, 255, 255, 0.795);
+    border-radius: 10px;
+    border-bottom: 2px solid rgba(15, 146, 26, 0.788);
+    border-top: 2px solid rgba(15, 146, 26, 0.788);
+    box-shadow: 0 -8px 8px rgba(15, 146, 26, 0.788), 0 8px 8px rgba(15, 146, 26, 0.788); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Garante que a altura seja consistente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-bottom: 5px solid rgba(15, 146, 26, 0.788);
+    border-top: 5px solid rgba(15, 146, 26, 0.788);
+}
+
+.icon-choose {
+    color: #0f921a;
+    /* Cor do ícone */
+}
+
+.feature-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #242323;
+    /* Cor do título */
+}
+
+.feature-description {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+/* Seção: Depoimentos */
+#testimonials {
+    background: var(--middle);
+    color: var(--light);
+    border-radius: 10px;
+    padding: 3rem 0;
+    position: relative;
+    z-index: -1; 
+}
+
+#testimonials::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/rexperformance-banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+}
+
+#testimonials .container {
+    position: relative;
+}
+
+
+.testimonial-item {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(2, 43, 5, 0.829);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.712);
+    margin-bottom: 2rem;
+}
+
+.testimonial-text {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--light);
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-author {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--secondary);
+    font-family: 'Autogate', Arial, sans-serif;
+}
+
+/* Controles do Slider */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
+/* Seção: Como Funciona */
+#how-it-works {
+    background: linear-gradient(rgba(0, 0, 0, 0.856) 0%, rgba(36, 35, 35, 1) 49%);
+    border-radius: 5px;
+    border-bottom: 2px solid rgba(15, 146, 26, 0.788);
+    border-top: 2px solid rgba(15, 146, 26, 0.788);
+    padding: 4rem 0; /* Padding superior e inferior */
+}
+
+.step-card {
+    background: rgba(255, 255, 255, 0.795);
+    border-radius: 10px;
+    border-bottom: 2px solid rgba(15, 146, 26, 0.788);
+    border-top: 2px solid rgba(15, 146, 26, 0.788);
+    box-shadow: 0 8px 8px rgba(15, 146, 26, 0.788); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Garante que a altura seja consistente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.step-card:hover {
+    transform: translateY(-10px);
+    border-top: 10px solid rgba(15, 146, 26, 0.788);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.63);
+}
+
+.step-icon {
+    color: #0f921a;
+    margin-right: 1rem; /* Espaço entre o ícone e o texto */
+    font-size: 3rem; /* Ajusta o tamanho do ícone */
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--dark); /* Cor do título */
+}
+
+.step-description {
+    font-size: 1rem;
+    color: var(--middle); /* Cor da descrição */
+}
+
+/* Seção: Preços*/
+#pricing {
+    background-color: var(--middle);
+    padding: 4rem 0;
+    position: relative;
+    z-index: 1; 
+}
+
+#pricing::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/rex-performance-destaque.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.3;
+}
+
+#pricing .container {
+    position: relative;
+}
+
+.section-title {
+    margin-bottom: 3rem;
+}
+
+.pricing-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Garante que o card ocupe toda a altura disponível */
+    padding: 2rem;
+    background-color: #ffffffcb;
+    border-radius: 10px;
+    border-bottom: 2px solid rgba(15, 146, 26, 0.788);
+    border-top: 2px solid rgba(15, 146, 26, 0.788);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.795);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    border-top: 10px solid rgba(15, 146, 26, 0.788);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-title {
+    font-family: 'Autogate', Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--dark); /* Cor do título */
+    margin-bottom: 1rem;
+    text-align: left; /* Alinhar o título à esquerda */
+}
+
+.pricing-price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--dark); /* Cor do preço */
+    margin-bottom: 1.5rem;
+    text-align: left; /* Alinhar o preço à esquerda */
+}
+
+.pricing-period {
+    font-size: 1rem;
+    color: var(--middle); /* Cor do período */
+}
+
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1.5rem;
+    text-align: left; /* Alinhar a lista à esquerda */
+}
+
+.pricing-features li {
+    font-size: 1rem;
+    color: var(--dark); /* Cor das características */
+    margin-bottom: 0.75rem; /* Adicionado espaço entre os itens */
+    display: flex;
+    align-items: center;
+}
+
+/* Seção: FAQ */
+#faq {
+    background: linear-gradient(rgba(0, 0, 0, 0.8) 0%, rgba(36, 35, 35, 1) 49%);
+    border-radius: 5px;
+    border-bottom: 2px solid rgba(15, 146, 26, 0.788);
+    border-top: 2px solid rgba(15, 146, 26, 0.788);
+    padding: 4rem 0;
+    color: var(--light); /* Cor do texto */
+}
+
+.accordion-button {
+    background-color: rgba(0, 0, 0, 0.692);
+    color: var(--light);
+    font-weight: bold;
+    box-shadow: inset 0 0 5px rgba(15, 146, 26, 0.7), 0 0 10px rgba(15, 146, 26, 0.7), 0 0 30px rgba(15, 146, 26, 0.7), 0 0 4px rgba(15, 146, 26, 0.7);
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--dark); /* Cor do texto ao expandir */
+    box-shadow: 0 0 20px rgba(252, 252, 252, 0.829);
+    background-color: var(--secondary);
+}
+
+.accordion-header {
+    font-family: 'Autogate', Arial, Helvetica, sans-serif;
+}
+
+.accordion-body {
+    background-color: rgba(255, 255, 255, 0.9); /* Cor de fundo do conteúdo */
+    color: var(--dark); /* Cor do texto */
+    border-radius: 0 0 10px 10px;
+    padding: 1.5rem;
+}
+
+/* Seção: Anuncios */
+#rex-show {
+    background-color: var(--middle);
+    padding: 4rem 0;
+    position: relative;
+    z-index: 1;
+}
+
+#rex-show::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/rexlift-bg-destaque.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.2;
+}
+
+#rex-show .container {
+    position: relative;
+}
+

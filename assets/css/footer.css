@@ -1,0 +1,21 @@
+.footer{
+    background: var(--middle);
+}
+
+.footer-about{
+    margin-top: -15px;
+}
+
+.footer-brand{
+    max-height: 150px;
+}
+
+@media (min-width: 767.98px) {
+    .footer-about {
+        margin-bottom: -75px;
+    }
+}
+
+.bg-box-footer {
+    background-image: linear-gradient(to bottom, var(--primary), var(--dark));
+}
