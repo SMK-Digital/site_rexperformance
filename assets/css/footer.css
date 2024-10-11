@@ -1,21 +1,121 @@
-.footer{
-    background: var(--middle);
+.footer {
+    background-color: #0a0a0a;
+    padding: 40px 0;
 }
 
-.footer-about{
-    margin-top: -15px;
+.footer-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: -60px;
+    margin-bottom: -20px;
+    padding: 0 20px;
 }
 
-.footer-brand{
+.footer-brand {
     max-height: 150px;
+    align-items: center;
+
 }
 
-@media (min-width: 767.98px) {
-    .footer-about {
-        margin-bottom: -75px;
+.footer-column {
+    flex: 1;
+    margin: 5px;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom, var(--primary), var(--dark));
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.712);
+}
+
+.footer-column a {
+    font-family: 'Autogate', Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    color: #bdc3c7;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: #f39c12;
+}
+
+.footer-column p {
+    font-family: 'Autogate', Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+    /* Controla o espaçamento vertical entre os itens */
+}
+
+.horizontal-list li {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos para o ícone */
+.horizontal-list li i {
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    background-color: var(--primary);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-family: 'Autogate', Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #bdc3c7;
+}
+
+.footer-bottom a {
+    color: #00d31c;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* Social Links */
+.social-links a {
+    color: #bdc3c7;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.social-links a:hover {
+    color: #f39c12;
+}
+
+.social-links img {
+    max-width: 150px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        align-items: center;
+    }
+
+    .footer-column {
+        text-align: center;
+        margin-bottom: 20px;
     }
 }
 
 .bg-box-footer {
-    background-image: linear-gradient(to bottom, var(--primary), var(--dark));
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom, #000, #002502);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.712);
 }

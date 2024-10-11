@@ -1,7 +1,7 @@
 /* assets/css/style.css */
 
 @import 'typography.css';
-@import 'topbar.css';
+@import './header.css';
 @import 'navbar.css';
 @import 'buttons.css';
 @import 'sections.css';
@@ -47,28 +47,30 @@ h5 {
 
 
 /*** Miscellaneous ***/
-.spinner-container {
+.whatsapp-button {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(255, 255, 255, 0.7); /* Opcional: para um fundo semi-transparente */
-    z-index: 9999; /* Garante que o spinner fique sobre outros elementos */
-}
-
-/* Classe para esconder o spinner */
-.hide-spinner {
-    display: none !important;
-}
-
-.back-to-top {
-    position: fixed;
-    display: none;
+    display: flex; /* Usar flexbox para centralizar o conteúdo */
+    align-items: center; /* Alinha verticalmente o ícone */
+    justify-content: center; /* Alinha horizontalmente o ícone */
     right: 45px;
     bottom: 45px;
     z-index: 99;
+    background-color: #25d366; /* Cor do WhatsApp */
+    color: white;
+    border-radius: 50%;
+    width: 60px; /* Largura do botão */
+    height: 60px; /* Altura do botão */
+    box-shadow: 0 4px 4px rgba(0, 68, 40, 0.788);
+    transition: background-color 0.3s ease-in-out;
 }
+
+.whatsapp-button i {
+    font-size: 28px; /* Tamanho do ícone */
+}
+
+.whatsapp-button:hover {
+    background-color: #042925; /* Cor mais escura ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(194, 243, 222, 0.788);
+    color: white;
+}
+

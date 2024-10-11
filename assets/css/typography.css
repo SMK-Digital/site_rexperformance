@@ -27,9 +27,14 @@ body {
     font-family: 'Bahnscrift', sans-serif; /* Fonte padrão do corpo */
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1{
     font-family: 'Broche', serif; /* Fonte para os títulos */
 }
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Autogate', serif; /* Fonte para os títulos */
+}
+
 
 code, pre {
     font-family: 'Bahnscrift', monospace; /* Fonte para código */

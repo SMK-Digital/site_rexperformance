@@ -1,12 +1,10 @@
-/* Estilos padrão buttons */
 .btn {
-    font-family: 'Nunito', sans-serif;
-    font-weight: 600;
+    font-family: 'Autogate', sans-serif;
+    font-weight: normal;
     transition: .5s;
 }
 
-.btn-primary,
-.btn-secondary {
+.btn-primary {
     color: #FFFFFF;
     box-shadow: inset 0 0 0 50px transparent;
     background-color: var(--dark);
@@ -20,72 +18,112 @@
     border-color: var(--light);
 }
 
-.btn-secondary:hover {
-    box-shadow: inset 0 0 0 0 var(--secondary);
-}
-
-.btn-square {
-    width: 36px;
-    height: 36px;
-}
-
-.btn-sm-square {
-    width: 30px;
-    height: 30px;
-}
-
-.btn-lg-square {
-    width: 48px;
-    height: 48px;
-}
-
-.btn-square,
-.btn-sm-square,
-.btn-lg-square {
-    padding-left: 0;
-    padding-right: 0;
+.button {
+    width: 100%;
+    position: relative;
     text-align: center;
+    color: #05f125;
+    font-size: 1rem;
+    line-height: 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: 0;
+    background: transparent;
+    background-color: transparent;
+    margin-bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
 }
 
-.btn-show {
-    font-family: 'Bahnscrift';
-    color: var(--light);
-    border: 2px solid var(--light);
-    border-radius: 5px;
-    font-size: 1.2rem;
-    background-color: rgba(25, 155, 47, 0.466);
+.button::before,.button::after {
+    content: "";
+    display: block;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    height: 1px;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out
 }
 
-.btn-show:hover {
-    background-color: var(--secondary);
-    color: var(--middle);
-    outline: none;
-    border-radius: 15px;
+.button::before {
+    background: -webkit-gradient(linear,left top,right top,color-stop(0,rgba(255,255,255,0)),to(#fff));
+    background: linear-gradient(90deg,rgba(255,255,255,0) 0,#1cf87f);
+    -webkit-transform-origin: right;
+    transform-origin: right
 }
 
-.btn-show:focus {
-    background-color: var(--secondary);
-    color: var(--middle);
-    outline: none;
-    border-radius: 15px;
+.button::after {
+    background: -webkit-gradient(linear,right top,left top,color-stop(0,rgba(255,255,255,0)),to(#fff));
+    background: linear-gradient(270deg,rgba(255,255,255,0) 0,#1cf87f);
+    -webkit-transform-origin: left;
+    transform-origin: left
 }
 
-.btn-finish {
+.button span {
+    position: relative;
+    background: #00bb1959;
+    color: #ffffff;
+    display: inline-block;
+    padding: .625rem 1.5625rem;
+    border-style: solid;
+    border-color: #06bd00;
+    border-width: 1px;
+    margin-left: .3125rem;
+    margin-right: .3125rem;
+    font-size: .9375rem;
+    z-index: 1;
+    font-family: titillium-regular;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out
+}
+
+.button span::before,.button span::after {
     position: absolute;
-    width: 120px;
-    bottom: 0px;
-    left: 60%;
-    transform: translateX(-50%);
-    margin-left: -55px;
-    color: var(--dark);
-    opacity: 0;
+    height: 100%;
+    width: 0;
+    top: 0;
+    content: "";
+    z-index: -1;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out
 }
 
-.btn-finish:hover {
-    bottom: -20px;
-    opacity: 1;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    background-color: rgba(3, 87, 17, 0.76);
+.button span::before {
+    left: 0
+}
+
+.button span::after {
+    right: 0
+}
+
+.button:hover {
+    text-decoration: none;
+    color: #fff;
+    outline: 0
+}
+
+.button:hover::before,.button:hover::after {
+    -webkit-transform: scale(0);
+    transform: scale(0)
+}
+
+.button:hover span {
+    color: #ffffff
+}
+
+.button:hover span::before,.button:hover span::after {
+    width: 50%;
+    background: #000000
 }
 
 .btn-destaque {

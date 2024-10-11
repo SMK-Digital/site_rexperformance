@@ -1,226 +1,135 @@
-/** Barra Títulos **/
-.section-title::before {
-    -webkit-box-shadow: 0px 0px 10px #adcce0;
-    box-shadow: 0px 0px 10px var(--secondary);
-    position: absolute;
-    content: "";
-    width: 150px;
-    height: 5px;
-    left: 0;
-    bottom: 0;
-    background: var(--light);
-    border-radius: 8px;
+.banner-container {
+    position: relative; /* Define o container como relativo para o posicionamento do texto */
+    width: 100%;
+    height: auto;
 }
 
-.section-title.text-center::before {
-    left: 50%;
-    margin-left: -75px;
-}
-
-.section-title.section-title-sm::before {
-    width: 90px;
-    height: 3px;
-}
-
-.section-title::after {
-    position: absolute;
-    content: "";
-    width: 16px;
-    height: 6px;
-    bottom: 0px;
-    border-radius: 30%;
-    background: var(--secondary);
-    box-shadow: 0px 0px 10px var(--secondary);
-    -webkit-animation: section-title-run 2s infinite linear;
-    animation: section-title-run 2s infinite linear;
-}
-
-.section-title.section-title-sm::after {
-    width: 4px;
-    height: 3px;
-}
-
-.section-title.text-center::after {
-    -webkit-animation: section-title-run-center 2s infinite linear;
-    animation: section-title-run-center 2s infinite linear;
-}
-
-.section-title.section-title-sm::after {
-    -webkit-animation: section-title-run-sm 2s infinite linear;
-    animation: section-title-run-sm 2s infinite linear;
-}
-
-@keyframes section-title-run {
-    0% {
-        left: 0;
-    }
-
-    50% {
-        left: 150px;
-    }
-
-    100% {
-        left: 0;
-    }
-}
-
-@keyframes section-title-run-center {
-    0% {
-        left: 50%;
-        margin-left: -75px;
-    }
-
-    50% {
-        left: 50%;
-        margin-left: 45px;
-    }
-
-    100% {
-        left: 50%;
-        margin-left: -75px;
-    }
-}
-
-@keyframes section-title-run-sm {
-    0% {
-        left: 0;
-    }
-
-    50% {
-        left: 85px;
-    }
-
-    100% {
-        left: 0;
-    }
-}
-
-/*** Carousel ***/
-.carousel-caption {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-}
-
-@media (max-width: 576px) {
-    .carousel-caption h5 {
-        font-size: 14px;
-        font-weight: 500 !important;
-    }
-
-    .carousel-caption h1 {
-        font-size: 30px;
-        font-weight: 600 !important;
-    }
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    width: 10%;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    width: 3rem;
-    height: 3rem;
-}
-
-.caption-background {
-    font-size: 0.9rem;
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
+.banner-text {
+    position: absolute; /* Faz com que o texto fique sobre a imagem */
+    top: 60%; /* Posição vertical */
+    left: 65%; /* Posição horizontal */
+    transform: translate(-50%, -50%); /* Centraliza o texto no centro da imagem */
+    color: white; /* Cor do texto */
+    font-size: 1.5rem; /* Tamanho da fonte */
+    text-align: right; /* Centraliza o texto */
     padding: 10px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    box-sizing: border-box;
 }
 
-/* Estilos para telas menores */
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    .banner-text {
+
+        font-size: 1rem; /* Tamanho menor para tablets e celulares */
+        width: 90%; /* Ajusta a largura do texto para dispositivos menores */
+        left: 50%;
+    }
+}
+
 @media (max-width: 576px) {
-    .carousel-caption {
-        padding-top: 10px;
-        margin: 0;
-    }
-
-    .carousel-item {
-        padding-bottom: 50px;
-    }
-
-    .caption-background {
-        display: none;
+    .banner-text {
+        font-size: 0.7rem; /* Tamanho ainda menor para telas muito pequenas */
+        width: 95%;
+        /* background-color: #2423238c;
+        border-radius: 5px; */
     }
 }
 
-/* Seção Destaque */
-.cropped-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-.cropped-image-up {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 100% 100%;
-}
-
-.left-div {
-    height: 100%;
-}
-
-/* Estilos para telas pequenas */
-@media (max-width: 991.98px) {
-    .cropped-image {
-        height: 200px;
-        object-fit: cover;
-        object-position: center;
-    }
-
-    .cropped-image-up {
-        height: 200px;
-        object-fit: cover;
-        object-position: 100% 30%;
-    }
-}
-
-.collapse-box {
+/**Seção Sobre**/
+.about-section {
     background: linear-gradient(rgba(0, 0, 0, 0.856) 0%, rgba(36, 35, 35, 1) 49%);
     border-radius: 5px;
     border-bottom: 2px solid rgba(15, 146, 26, 0.788);
     border-top: 2px solid rgba(15, 146, 26, 0.788);
-    max-height: 0;
-    overflow: hidden;
-    padding: 8px;
-    opacity: 0;
-    transition: max-height 0.5s ease, opacity 0.5s ease;
+    margin: 10px;
 }
 
-.collapse.show {
-    max-height: 300px;
+.about-section h2 {
+    color: var(--light);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    color: var(--light);
+    font-size: 1.2rem;
+}
+
+.counter-section {
+    text-align: center;
+    padding: 50px;
+    background-color: #000;
+    border-radius: 8px;
+    border-top:solid 4px #0f921a;
+    border-bottom:solid 4px #0f921a;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.61);
+}
+
+.counter-section .row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+}
+
+.counter {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+    opacity: 0;
+    transition: color 0.5s ease-in-out;
+    margin: 20px 100px;
+    padding-top: 40px;
+    background-color: #ffffff;
+    box-shadow: 4px 0 10px 4px rgba(0, 0, 0, 0.61);
+    border-radius: 150px 150px 0 0;
+    border-top: solid 15px transparent;
+    border-bottom: solid #202020 5px;
+    flex: 1 1 30%; 
+
+}
+
+.counter-section .counter {
     opacity: 1;
 }
 
-/* Seção: Por Que Escolher a Rex Performance? */
+.counter-section p {
+    font-family: 'Autogate', Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+    flex: 1 1 30%; 
+}
+
+@media (max-width: 768px) {
+    .counter {
+        margin: 20px 100px; 
+    }
+}
+
+@media (max-width: 576px) {
+    .counter {
+        font-size: 1.5rem; /* Ajusta o tamanho da fonte em telas bem pequenas */
+        padding-top: 30px; /* Ajusta o espaçamento interno */
+        margin: 20px 100px;
+    }
+   
+}
+
+
+/* Seção: Why choose */
 #why-choose-us {
     background: linear-gradient(rgba(0, 0, 0, 0.856) 0%, rgba(36, 35, 35, 1) 49%);
     border-radius: 5px;
     border-bottom: 2px solid rgba(15, 146, 26, 0.788);
     border-top: 2px solid rgba(15, 146, 26, 0.788);
+    margin: 10px;
 }
 
 .feature-box {
-    background: rgba(255, 255, 255, 0.795);
+    background: rgba(0, 0, 0, 0.795);
     border-radius: 10px;
     border-bottom: 2px solid rgba(15, 146, 26, 0.788);
     border-top: 2px solid rgba(15, 146, 26, 0.788);
-    box-shadow: 0 -8px 8px rgba(15, 146, 26, 0.788), 0 8px 8px rgba(15, 146, 26, 0.788); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
     height: 100%; /* Garante que a altura seja consistente */
     display: flex;
     flex-direction: column;
@@ -231,25 +140,33 @@
 .feature-box:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    border-bottom: 5px solid rgba(15, 146, 26, 0.788);
+    border-bottom: 10px solid rgba(15, 146, 26, 0.788);
     border-top: 5px solid rgba(15, 146, 26, 0.788);
+    box-shadow: 0 -8px 8px rgba(15, 146, 26, 0.788), 0 8px 8px rgba(15, 146, 26, 0.788); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .icon-choose {
     color: #0f921a;
+    font-size: 4rem;
     /* Cor do ícone */
 }
 
 .feature-title {
     font-size: 1.25rem;
-    font-weight: 600;
-    color: #242323;
+    font-weight: normal;
+    color: var(--light);
     /* Cor do título */
 }
 
 .feature-description {
     font-size: 1rem;
-    color: #6c757d;
+    color: var(--light);
+    border-top: #0f921a solid 2px;
+    border-bottom: #0f921a solid 2px;
+    border-radius: 4px;
+    background-color: #ffffff38;
+    padding: 5px;
 }
 
 /* Seção: Depoimentos */
@@ -259,7 +176,8 @@
     border-radius: 10px;
     padding: 3rem 0;
     position: relative;
-    z-index: -1; 
+    z-index: -1;
+    overflow: hidden; 
 }
 
 #testimonials::before {
@@ -272,7 +190,9 @@
     background-image: url('../img/rexperformance-banner.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     opacity: 0.3;
+    z-index: -1;
 }
 
 #testimonials .container {
@@ -283,9 +203,9 @@
 .testimonial-item {
     text-align: center;
     padding: 2rem;
-    background: rgba(2, 43, 5, 0.829);
+    background: rgba(2, 43, 5, 0.9);
     border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.712);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
     margin-bottom: 2rem;
 }
 
@@ -307,6 +227,12 @@
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     filter: invert(1);
+}
+
+/* Controle de margens nos botões de controle do slider */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%; /* Reduz a área clicável dos botões */
 }
 
 /* Seção: Como Funciona */
@@ -358,134 +284,105 @@
     color: var(--middle); /* Cor da descrição */
 }
 
-/* Seção: Preços*/
-#pricing {
-    background-color: var(--middle);
-    padding: 4rem 0;
-    position: relative;
-    z-index: 1; 
+/**Seção Contato**/
+
+.contact-section {
+    margin: 50px;
+    padding: 50px 0;
+    background-color: #000000;
 }
 
-#pricing::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+.container-contact{
     width: 100%;
-    height: 100%;
-    background-image: url('../img/rex-performance-destaque.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.3;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    /* background: var(--middle); */
 }
 
-#pricing .container {
-    position: relative;
+.contact-title h5{
+    font-family: 'Autogate';
 }
 
-.section-title {
-    margin-bottom: 3rem;
-}
-
-.pricing-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%; /* Garante que o card ocupe toda a altura disponível */
-    padding: 2rem;
-    background-color: #ffffffcb;
-    border-radius: 10px;
-    border-bottom: 2px solid rgba(15, 146, 26, 0.788);
-    border-top: 2px solid rgba(15, 146, 26, 0.788);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.795);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.pricing-card:hover {
-    transform: translateY(-10px);
-    border-top: 10px solid rgba(15, 146, 26, 0.788);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.pricing-title {
-    font-family: 'Autogate', Arial, Helvetica, sans-serif;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--dark); /* Cor do título */
-    margin-bottom: 1rem;
-    text-align: left; /* Alinhar o título à esquerda */
-}
-
-.pricing-price {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--dark); /* Cor do preço */
-    margin-bottom: 1.5rem;
-    text-align: left; /* Alinhar o preço à esquerda */
-}
-
-.pricing-period {
-    font-size: 1rem;
-    color: var(--middle); /* Cor do período */
-}
-
-.pricing-features {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    margin-bottom: 1.5rem;
-    text-align: left; /* Alinhar a lista à esquerda */
-}
-
-.pricing-features li {
-    font-size: 1rem;
-    color: var(--dark); /* Cor das características */
-    margin-bottom: 0.75rem; /* Adicionado espaço entre os itens */
+.contact-info {
     display: flex;
     align-items: center;
+    margin-top: 20px;
+    font-family: 'Autogate', Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 
-/* Seção: FAQ */
-#faq {
+.contact-icon {
+    font-size: 50px;
+    margin-right: 20px;
+    color: #009d00;
+    justify-content: space-between;
+}
+
+
+.contact-info a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.contact-info span {
+    font-size: 2rem;
+
+}
+
+.form-container {
+    background-color: var(--dark);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container input,
+.form-container textarea {
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.form-container textarea {
+    resize: none;
+}
+
+.form-container button {
+    background-color: #009d00;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: #007a00;
+}
+
+/* Seção: Anuncios */
+#rex-show {
+    /* background-color: var(--middle); */
+    padding: 4rem 0;
+    position: relative;
+    z-index: 1;
+    margin: 15px;
     background: linear-gradient(rgba(0, 0, 0, 0.8) 0%, rgba(36, 35, 35, 1) 49%);
     border-radius: 5px;
     border-bottom: 2px solid rgba(15, 146, 26, 0.788);
     border-top: 2px solid rgba(15, 146, 26, 0.788);
     padding: 4rem 0;
-    color: var(--light); /* Cor do texto */
-}
-
-.accordion-button {
-    background-color: rgba(0, 0, 0, 0.692);
-    color: var(--light);
-    font-weight: bold;
-    box-shadow: inset 0 0 5px rgba(15, 146, 26, 0.7), 0 0 10px rgba(15, 146, 26, 0.7), 0 0 30px rgba(15, 146, 26, 0.7), 0 0 4px rgba(15, 146, 26, 0.7);
-}
-
-.accordion-button:not(.collapsed) {
-    color: var(--dark); /* Cor do texto ao expandir */
-    box-shadow: 0 0 20px rgba(252, 252, 252, 0.829);
-    background-color: var(--secondary);
-}
-
-.accordion-header {
-    font-family: 'Autogate', Arial, Helvetica, sans-serif;
-}
-
-.accordion-body {
-    background-color: rgba(255, 255, 255, 0.9); /* Cor de fundo do conteúdo */
-    color: var(--dark); /* Cor do texto */
-    border-radius: 0 0 10px 10px;
-    padding: 1.5rem;
-}
-
-/* Seção: Anuncios */
-#rex-show {
-    background-color: var(--middle);
-    padding: 4rem 0;
-    position: relative;
-    z-index: 1;
 }
 
 #rex-show::before {
@@ -495,7 +392,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../img/rexlift-bg-destaque.jpg');
+    /* background-image: url('../img/rexlift-bg-destaque.jpg'); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
